@@ -1,3 +1,6 @@
+Cloudfront endpoint URL: 
+https://d1yb8h1trwulbt.cloudfront.net/
+
 Protocol:
 
 1. Static Website was uploaded to the s3 bucket
