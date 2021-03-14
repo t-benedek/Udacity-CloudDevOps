@@ -1,5 +1,4 @@
-Cloudfront endpoint URL: 
-https://d1yb8h1trwulbt.cloudfront.net/
+Cloudfront endpoint URL: https://d1yb8h1trwulbt.cloudfront.net/
 
 Protocol:
 
