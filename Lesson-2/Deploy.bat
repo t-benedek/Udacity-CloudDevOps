@@ -1,1 +1,0 @@
-aws cloudformation create-stack  --stack-name bennyStack --template-body file://benny-final.yml --parameters file://benny-params.json
