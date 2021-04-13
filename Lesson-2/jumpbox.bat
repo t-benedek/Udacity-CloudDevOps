@@ -1,1 +1,0 @@
-ssh ec2-user@34.215.30.139 -i C:\home\Code\Udacity\CloudDevOps\user\EC2-CLI-Exercise.pem
