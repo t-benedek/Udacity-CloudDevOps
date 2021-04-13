@@ -98,7 +98,12 @@ Resources:
           unzip -o udacity.zip
 
       # Image ID taken from http://cloud-images.ubuntu.com/locator/ec2/
-      ImageId: ami-04b01d7f989b9ac8b
+      
+      # Ubuntu 16.04 LTS
+      # ImageId: ami-04b01d7f989b9ac8b
+      
+      # Ubuntu 18.04 LTS
+      ImageId: ami-007e276c37b5ff2d7
 
       # Keys taken from standard Udacity Tests which should be fine for this exercise
       KeyName: EC2-CLI-Exercise
@@ -108,7 +113,7 @@ Resources:
       
       SecurityGroups:
       - Ref: WebServerSecGroup
-      InstanceType: t2.micro
+      InstanceType: t2.medium
       BlockDeviceMappings:
       - DeviceName: "/dev/sdk"
         Ebs:
