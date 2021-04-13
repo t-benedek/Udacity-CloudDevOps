@@ -1,0 +1,52 @@
+Resources:
+  UdacityS3ReadOnlyEC2:
+    Type: AWS::IAM::Role
+    Properties: 
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ec2.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+
+  RolePolicies:
+    Type: AWS::IAM::Policy
+    Properties:
+        PolicyName: S3AccessIAMPolicy
+        PolicyDocument:
+          Statement:
+            - Effect: Allow
+              Action: 
+                - s3:GetObject*
+              Resource: '*'
+        Roles: 
+          - Ref: "UdacityS3ReadOnlyEC2"
+
+  InstanceProfileForWebserver:
+    Type: AWS::IAM::InstanceProfile
+    Properties: 
+      Path: /
+      Roles:
+        - Ref: UdacityS3ReadOnlyEC2
+  
+  EC2TestIntance:
+    Type: AWS::EC2::Instance
+    Properties:
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          sudo apt-get update -y
+          sudo apt-get install apache2 -y
+          sudo systemctl start apache2.service
+          cd /var/www/html
+          sudo chmod 777 .
+          sudo echo "Benny ich glaube .... es klappt ;) " > index.html
+      # ImageId: ami-005bdb005fb00e791
+      ImageId: ami-04b01d7f989b9ac8b
+      KeyName: EC2-CLI-Exercise
+
+      # THIS IS WHERE THE PROBLEM BEGINS TO LOOP
+      IamInstanceProfile: !Ref InstanceProfileForWebserver

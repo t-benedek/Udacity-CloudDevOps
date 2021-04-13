@@ -1,5 +1,5 @@
 Description: >
-    Challenge2 Benny Stack
+    Challenge2 Network Stack based on the architecture picture Architecture.jpeg File
 
 Parameters:
 
@@ -141,7 +141,7 @@ Outputs:
         Description: Private Routing
         Value: !Ref PrivateRouteTable
         Export:
-          Name: !Sub ${EnvironmentName}-PRI1-RT
+          Name: !Sub ${EnvironmentName}-PRI-RT
 
     PublicSubnet:
         Description: A reference to the public subnet 
