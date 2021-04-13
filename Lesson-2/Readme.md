@@ -21,5 +21,5 @@ udagram endpoint: http://udagr-webap-10io7707jzw5l-736021081.us-west-2.elb.amazo
 - resolving "hickups" in the aws cloudformation stacks (Rollback-in-progress)
 
 ## Measurements
-Network Stack: ~ 3 min
-Server Stack: ~ 3 min.
+- Network Stack: ~ 3 min.
+- Server Stack: ~ 3 min.
