@@ -2,7 +2,7 @@
 
 udagram endpoint: 
 
-Comments
+## Comments
 
 1. Udagram architecture overview is shown in "Cloud-DevOps-Lesson2.png" (taken from lucid charts)
 2. udagram-network.yml: Create the network stack with the public and private subnets etc.
@@ -13,12 +13,7 @@ Comments
 7. updateStack.bat: update stack with name, cloudformation file and parameter file (Windows)
 8. deleteStack.bat: update stack with name (Windows)
 
-
-
-udagram-network.yml: creating the needed network stack for udagram
-
-
-Challenges: 
+## Challenges: 
 - IAM Role & IAM InstanceProfile
 - Finding the appropriate AMI instance (ubuntu) that is able to start Apache2 properly (did not work from the beginning, had to experiment)
 - Learning the update mechanisms of aws stacks (what takes long etc.)
