@@ -2,7 +2,7 @@
 
 ## Comments
 
-1. Udagram architecture overview is shown in "Cloud-DevOps-Lesson2.png" (taken from lucid charts)
+1. Udagram architecture overview is shown in [Cloud-DevOps-Lesson2.png](https://github.com/t-benedek/Udacity-CloudDevOps/blob/main/Lesson-2/Cloud-DevOps-Lesson2.png) (made with lucid charts)
 2. udagram-network.yml: Create the network stack with the public and private subnets etc.
 3. udagram-network-params.json: Needed parameters for the network stack
 4. udagram-server.yml: creating the needed server stack for udagram (including the copy of the S3 bucket with the needed IAM credentials)
