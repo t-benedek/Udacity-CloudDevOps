@@ -103,9 +103,6 @@ Resources:
       # Works! ami-007e276c37b5ff2d7
       ImageId: ami-02701bcdc5509e57b
 
-      # Keys taken from standard Udacity Tests which should be fine for this exercise
-      KeyName: EC2-CLI-Exercise
-
       # Instance Profile for accessing the S3 Bucket from udagram S3 source bucket
       IamInstanceProfile: !Ref InstanceProfileForWebserver
       
